@@ -27,7 +27,7 @@ const BlogPage = ({ posts }) => {
       <Head>
         <title>Blog | My Next.js Blog</title>
         <meta name="description" content="My Next.js Blog" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="./favicon.ico" />
       </Head>
 
       <main className={styles.main}>
@@ -37,7 +37,16 @@ const BlogPage = ({ posts }) => {
               <Link href={'/blog/' + post.slug} passHref key={index}>
                 <a className="item">
                   <div className="thumbnail">
-                    <Image src={post.frontmatter.thumbnailUrl} alt="thumbnail" className="thumbnail-image" loading="eager"/>
+                    <Image
+                      src={`./${post.frontmatter.thumbnailUrl}`}
+                      alt="thumbnail"
+                      className="thumbnail-image"
+                      loading="eager" 
+                      width={650}
+                      height={340}
+                      priority
+                    />
+                    {/* <Image src={post.frontmatter.thumbnailUrl} alt="thumbnail" className="thumbnail-image" loading="eager" /> */}
                   </div>
                   <h2 className="title">{post.frontmatter.title}</h2>
                   <p className="description">{post.frontmatter.description}</p>
