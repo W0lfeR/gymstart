@@ -14,11 +14,6 @@ const OfficalHomepage = () => {
                 <section className="gymstart-homepage" id="/">
                     <div className="container-space-homepage">
                         <section className="gymstart-homepage-container gs-container ">
-                            {/* <section className="gymstart-homepage-data">
-                            <h2 className="gymstart-subtitle">{t("gymstartsubtitle")}</h2>
-                            <h1 className="gymstart-title">{t("gymstarttitle")}</h1>
-                            <p className="gymstart-description">{t("gymstartdescription")}</p>
-                        </section> */}
                             <section className="gymstart-homepage-data">
                                 <h2 className="gymstart-subtitle">MAKE YOUR</h2>
                                 <h1 className="gymstart-title"> BODY SHAPE</h1>
@@ -54,7 +49,7 @@ const OfficalHomepage = () => {
                             <h1>За нас</h1>
                             <div className="gymstart-aboutus-content-centralrotation">
                                 <div className="gymstart-aboutus-content-rotation">
-                                    <p>  "Start Fitness Club", е разположен в сградата на ПГТЕ „Хенри Форд”, в близост до метростанция „Вардар” и последната спирка на трамвай № 3. Клубът /Залата/ е оборудван/а с професионални уреди:</p>
+                                    <p>  &quot;Start Fitness Club&quot;, е разположен в сградата на ПГТЕ &quot;Хенри Форд&quot;, в близост до метростанция &quot;Вардар&quot; и последната спирка на трамвай № 3. Клубът /Залата/ е оборудван/а с професионални уреди:</p>
                                     <p>LIFE FITNESS - кардио зона</p>
                                     <p>IVANKO - дискове, фиксирани дъмбели, криви фиксирани и свободни лостове</p>
                                     <p>JIMSA - професионално фитнес оборудване</p>
@@ -64,7 +59,7 @@ const OfficalHomepage = () => {
                                 <div className="gymstart-aboutus-content-rotationtwo">
                                     <p> Ако Ви е омръзнало от претъпкани фитнес клубове/зали и търсите място, където да се почувствате специални и да бъдете себе си,   елате при нас!
 
-                                        Уютна обстановка; квалифицирани консултации; персонални тренировъчни програми и диети;фитнес библиотека, солариум; масажи;      богат протеинов и кафе бар Ви очакват!
+                                        Уютна обстановка; квалифицирани консултации; персонални тренировъчни програми и диети;фитнес библиотека, солариум, масажи      богат протеинов и кафе бар Ви очакват!
                                         На входа на Start Fitness Club ще Ви посрещнат нашите служители, които ще Ви съдействат по време на целия Ви престой.
 
                                         Заповядайте!
