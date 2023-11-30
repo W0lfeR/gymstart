@@ -1,0 +1,1751 @@
+@import url('reset.css');
+/* @import url('fonts.css');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Inter:100,200,300,400,500,600,700,800,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:100,200,300,400,500,600,700,800,900&display=swap');
+@import url('https://use.fontawesome.com/releases/v5.4.2/css/all.css'); */
+
+/* html {
+  font: 16px/1.5 -apple-system, BlinkMacSystemFont, 'Matter';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #07050f;
+  background-color: #07050f;
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  --first-gradient-coords: -6% 37%;
+  --second-gradient-coords: 107% 59%;
+  background-image: radial-gradient(circle closest-corner at var(--first-gradient-coords), rgba(40, 72, 122, 0.85), transparent), radial-gradient(circle closest-corner at var(--second-gradient-coords), rgba(40, 72, 122, 0.85), transparent);
+}
+
+.container-space {
+  max-width: 70rem;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+ */
+
+
+
+
+
+
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Red+Hat+Display:wght@400;700;900&display=swap");
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  --header-height: 3.5rem;
+
+  /*========== Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
+  --first-color: hsl(79, 72%, 55%);
+  --first-color-light: hsl(79, 97%, 77%);
+  --first-color-alt: hsl(79, 67%, 52%);
+  --first-color-dark: hsl(79, 63%, 50%);
+  --first-color-gray: hsl(79, 6%, 64%);
+  --title-color: hsl(180, 4%, 98%);
+  --title-color-black: hsl(180, 4%, 12%);
+  --text-color: hsl(180, 4%, 72%);
+  --text-color-light: hsl(180, 4%, 65%);
+  --body-color: hsl(180, 12%, 8%);
+
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --body-font: 'Red Hat Display', sans-serif;
+  --second-font: 'Kaushan Script', cursive;
+  --biggest-font-size: 2rem;
+  --bigger-font-size: 1.5rem;
+  --big-font-size: 1.25rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
+  --normal-font-size: .938rem;
+  --small-font-size: .813rem;
+  --smaller-font-size: .75rem;
+
+  /*========== Font weight ==========*/
+  --font-bold: 700;
+  --font-black: 900;
+
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+
+/* Responsive typography */
+@media screen and (min-width: 1024px) {
+  :root {
+    --biggest-font-size: 6rem;
+    --bigger-font-size: 3.5rem;
+    --big-font-size: 2.75rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+    --smaller-font-size: .813rem;
+  }
+}
+
+/*=============== BASE ===============*/
+html {
+  font: 16px/1.5 'Red Hat Display', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  --scroll-behavior: smooth!important;
+  scroll-behavior: smooth!important;
+}
+
+
+body {
+  background-color: var(--body-color);
+  color: var(--text-color);
+}
+
+#__next {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+
+
+.container-space {
+  max-width: 70rem;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.container-space-homepage {
+  max-width: 92rem;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+/* -------- Header -----------  */
+.gymstart-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1200;
+  width: 100%;
+}
+
+.scrolling {
+  background-color: rgba(0, 0, 0, .3);
+}
+
+
+.gymstart-header-wrap {
+  height: 70px;
+  margin: 0 auto;
+  max-width: 1830px;
+  position: relative;
+  padding: 0 65px 0 15px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.header-content {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+.header-logo {
+  width: 157px;
+  display: block;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+/* Header END*/
+
+/* Nav */
+
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 260px;
+  z-index: 1250;
+  overflow-y: auto;
+  padding: 40px 20px;
+  margin-left: -280px;
+  background: #24242c;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+}
+
+nav.active {
+  margin-left: 0;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+  z-index: 9;
+}
+
+.header-toggle {
+  top: 50%;
+  right: 15px;
+  padding: 0;
+  width: 32px;
+  height: 32px;
+  /* font-size: 0; */
+  line-height: 0;
+  cursor: pointer;
+  margin-top: -16px;
+  position: absolute;
+  background: 0 0;
+  display: inline-block
+}
+
+.header-toggle span,
+.header-toggle:after,
+.header-toggle:before {
+  top: 50%;
+  left: 50%;
+  z-index: 10;
+  width: 24px;
+  height: 2px;
+  content: '';
+  background: #fff;
+  margin-left: -12px;
+  position: absolute;
+  border-radius: 2px;
+  display: inline-block
+}
+
+.header-toggle span {
+  margin-top: -1px
+}
+
+.header-toggle:after {
+  margin-top: -9px
+}
+
+.header-toggle:before {
+  margin-top: 7px
+}
+
+.header-toggle.open span {
+  display: none
+}
+
+.header-toggle.open:after {
+  margin-top: -1px;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg)
+}
+
+.header-toggle.open::before {
+  margin-top: -1px;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg)
+}
+
+
+.gymstart-header ul li {
+  list-style: none;
+}
+
+.gymstart-header ul li a {
+  position: relative;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  color: #edf0f1;
+  text-decoration: none;
+}
+
+.gymstart-header .gymstart-header-wrap .nav-menu .gymstart-ul li {
+  padding: 0;
+  list-style: none;
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.gymstart-header ul li a {
+  color: #fff;
+  padding: 5px 0;
+  font-weight: 700;
+  white-space: nowrap;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+.gymstart-header ul li a:hover {
+  color: #7e7e80;
+  text-decoration: none;
+}
+
+.gymstart-logo-image {
+  max-height: 100px;
+  max-width: 167px;
+}
+
+
+
+/* Homepage */
+/* .gymstart-homepage {
+  position: relative;
+  padding-bottom: 0;
+}
+
+.gymstart-homepage-container {
+  padding-top: 4rem;
+  row-gap: 3rem;
+}
+
+.gs-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  position: relative;
+}
+
+.gymstart-homepage-data {
+  text-align: center;
+}
+
+.gymstart-subtitle {
+  font-size: var(--bigger-font-size);
+  --webkit-text-stroke: 1px var(--title-color);
+
+}
+
+.gymstart-title {
+  font-size: var(--biggest-font-size);
+  font-weight: var(--font-black);
+  margin: .5rem 0;
+}
+
+.gymstart-subtitle, .gymstart-title {
+  letter-spacing: 1.5px;
+}
+
+.gymstart-description {
+  margin-bottom: 2.5rem;
+}
+
+.gymstart-homepage-triangle {
+  height: 325px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  clip-path: polygon(100% 0, 0 100%, 100% 100%);
+}
+
+.homepage-triangle-1 {
+  width: 105px;
+  background-color: var(--first-color);
+}
+
+.homepage-triangle-2 {
+  width: 205px;
+  background-color: var(--first-color-alt);
+}
+
+
+.homepage-triangle-3 {
+  width: 305px;
+  background-color: var(--first-color-dark);
+}
+
+.gymstart-homepage-image {
+  display: block;
+  position: relative;
+  z-index: 1;
+  width: 350px;
+  margin: 0 auto;
+} */
+
+
+
+
+
+
+
+/*========== HOMEPAGE MINE ==========*/
+/* 
+.gymstart-homepage {
+  position: relative;
+  padding-top: 40px;
+
+}
+
+.gymstart-homepage-container {
+  padding-top: 4rem;
+  row-gap: 3rem;
+}
+
+.gs-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  position: relative;
+}
+
+.gymstart-homepage-data {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.gymstart-subtitle {
+  font-size: var(--bigger-font-size);
+  --webkit-text-stroke: 1px var(--title-color);
+
+}
+
+.gymstart-title {
+  font-size: var(--biggest-font-size);
+  font-weight: var(--font-black);
+  margin: .5rem 0;
+}
+
+.gymstart-subtitle,
+.gymstart-title {
+  letter-spacing: 1.5px;
+}
+
+.gymstart-description {
+  margin-bottom: 2.5rem;
+}
+
+.gymstart-homepage-triangle {
+  height: 342px;
+  position: absolute;
+  right: -66px;
+  bottom: 0;
+  -webkit-clip-path: polygon(100% 0, 0 100%, 100% 100%);
+  clip-path: polygon(100% 0, 0 100%, 100% 100%);
+
+}
+
+.homepage-triangle-1 {
+  width: 105px;
+  background-color: var(--first-color);
+}
+
+.homepage-triangle-2 {
+  width: 205px;
+  background-color: var(--first-color-alt);
+}
+
+
+.homepage-triangle-3 {
+  width: 305px;
+  background-color: var(--first-color-dark);
+}
+
+.gymstart-homepage-image {
+  position: relative;
+  z-index: 1;
+  margin: 0 auto;
+  display: flex;
+  width: 50%;
+}
+
+@media screen and (max-width: 500px) {
+  .gs-container {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+  }
+
+  .gymstart-homepage-data {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .gymstart-homepage-image {
+    position: relative;
+    z-index: 1;
+    margin: 0 auto;
+    display: flex;
+    width: 100%;
+  }
+} */
+
+
+/*========== CHATGPT HOMEPAGE = ==========*/
+
+.gymstart-homepage {
+  position: relative;
+  padding-top: 40px;
+}
+
+.gymstart-homepage-container {
+  padding-top: 4rem;
+  row-gap: 3rem;
+}
+
+.gs-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  position: relative;
+}
+
+.gymstart-homepage-data {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.gymstart-subtitle {
+  font-size: var(--bigger-font-size);
+  --webkit-text-stroke: 1px var(--title-color);
+}
+
+.gymstart-title {
+  font-size: var(--biggest-font-size);
+  font-weight: var(--font-black);
+  margin: 0.5rem 0;
+}
+
+.gymstart-subtitle,
+.gymstart-title {
+  letter-spacing: 1.5px;
+}
+
+.gymstart-description {
+  margin-bottom: 2.5rem;
+}
+
+.gymstart-homepage-triangle {
+  height: 342px;
+  position: absolute;
+  right: -66px;
+  bottom: 0;
+  -webkit-clip-path: polygon(100% 0, 0 100%, 100% 100%);
+  clip-path: polygon(100% 0, 0 100%, 100% 100%);
+}
+
+.homepage-triangle-1 {
+  width: 105px;
+  background-color: var(--first-color);
+}
+
+.homepage-triangle-2 {
+  width: 205px;
+  background-color: var(--first-color-alt);
+}
+
+.homepage-triangle-3 {
+  width: 305px;
+  background-color: var(--first-color-dark);
+}
+
+.gymstart-homepage-image {
+  position: relative;
+  z-index: 1;
+  margin: 0 auto;
+  display: flex;
+  width: 50%;
+}
+
+@media screen and (max-width: 768px) {
+  .gs-container {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+  }
+
+  .gymstart-homepage-data {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .gymstart-homepage-triangle {
+    height: 250px;
+    right: -9%;
+  }
+
+  .gymstart-homepage-image {
+    position: relative;
+    z-index: 1;
+    margin: 0 auto;
+    display: flex;
+    width: 100%;
+  }
+}
+
+/*========== sponsors ==========*/
+
+.gymstart-sponsors {
+  position: relative;
+  padding-top: 40px;
+  padding-bottom: 30px;
+}
+
+.gymstart-sponsors-logos {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  justify-items: center;
+}
+
+.gymstart-sponsor-image {
+  width: 120px;
+}
+
+
+
+@media screen and (min-width: 1000px) {
+  .gymstart-sponsors-logos {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/*========== introducingpart ==========*/
+
+.gymstart-introducingpart {
+  padding-bottom: 105px;
+}
+
+
+.gymstart-introducingpart-title {
+  text-align: center;
+  padding-top: 105px;
+  padding-bottom: 105px;
+
+}
+
+.gymstart-introducingpart-title h1 {
+  /* font-family: Open Sans; */
+  font-size: 40px;
+  font-weight: 700;
+  letter-spacing: 0px;
+  color: #2ac4b7;
+  margin-bottom: 10px;
+  line-height: 40px;
+}
+
+.gymstart-introducingpart-title p {
+  /* font-family: 'Oswald', sans-serif; */
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 30px;
+  letter-spacing: 8px;
+  color: #ffffff;
+  margin-bottom: 0px;
+}
+
+.gymstart-introducingpart .embed-responsive {
+  max-width: 1360px;
+  width: 71%;
+  height: 509px;
+  margin: auto;
+  border: 20px solid #2a2a2a;
+  border-radius: 70px;
+  -webkit-box-shadow: 0 0 10px 1px #131313;
+  box-shadow: 0 0 10px 1px #131313;
+}
+
+.gymstart-introducingpart {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 0;
+  overflow: hidden;
+  padding-bottom: 189px;
+}
+
+.embed-responsive-16by9::before {
+  padding-top: 56.25%;
+}
+
+.embed-responsive::before {
+  /* display: block;
+  content: ""; */
+  width: 100%;
+  height: 100%;
+}
+
+.gymstart-introducingpart .embed-responsive iframe {
+  width: 100%;
+  height: 100%;
+  border-radius: 38px;
+}
+
+.embed-responsive-item {
+  width: 100%;
+  height: 100%;
+}
+
+.embed-responsive .embed-responsive-item,
+.embed-responsive iframe,
+.embed-responsive embed,
+.embed-responsive object,
+.embed-responsive video {
+  position: relative;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/*========== Aboutus ==========*/
+
+
+/* .gymstart-aboutus {
+  background: #181F21;
+} */
+
+.gymstart-aboutus h1 {
+  color: white;
+  text-align: center;
+}
+
+.gymstart-aboutus-content-centralrotation p {
+  color: white;
+}
+
+.gymstart-aboutus-content-centralrotation {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.gymstart-aboutus-content-rotation {
+  width: 50%;
+}
+
+.gymstart-aboutus-content-division {
+  padding: 0 88px;
+}
+
+.gymstart-aboutus-content-rotationtwo {
+  width: 50%;
+}
+
+
+/*========== Gallery ==========*/
+
+
+
+.gymstart-gallery {
+  position: relative;
+  padding-top: 66px;
+  padding-bottom: 142px;
+}
+
+#container-space-gallery {
+  max-width: 100rem;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0rem 0rem;
+}
+
+.gymstart-officialgallery {}
+
+.gymstart-item {
+  -webkit-column-width: calc(250px + 5vw);
+  column-width: calc(250px + 5vw);
+  column-fill: balance;
+  -webkit-column-fill: balance;
+}
+
+.gymstart-item img {
+  width: 102%;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .1);
+  height: auto;
+}
+
+
+/* ---------------------------------------PAGINATION ---------------------------------------*/
+.pagination-placement {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pagination-item {
+  background-color: #ccc;
+  border: none;
+  border-radius: 50%;
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+  margin: 0 5px;
+  padding: 6px;
+  width: 40px;
+  height: 40px;
+  transition: background-color 0.3s ease;
+  border-radius: 50%;
+}
+
+.pagination-item-selected {
+  background-color: #007bff;
+  color: #fff;
+  border-color: #007bff;
+  border-radius: 50%;
+}
+
+.pagination-item:hover {
+  background-color: #0070e0;
+}
+
+
+
+.transition-opacity {
+  transition-property: opacity;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.opacity-0 {
+  opacity: 0;
+}
+
+.duration-two {
+  transition-duration: 0.1s;
+}
+
+@media screen and (max-width: 800px) {
+  .gymstart-item {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .gymstart-item {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+
+
+
+/* .gymstart-officialgallery {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-auto-rows: 250px 150px;
+  grid-auto-flow: dense;
+}
+
+@media (min-width: 400px) {
+  .gymstart-officialgallery .gymstart-item:first-child {
+    grid-area: 1/1/span 2/span 2;
+  }
+}
+
+.gymstart-officialgallery .gymstart-item img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+ */
+
+
+/*========== Blog ==========*/
+
+.postPage {
+  color: white;
+  margin: 0 auto;
+  /* font-size: 1.2em;
+  line-height: 1.5em; */
+  max-width: 70rem;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  margin-top: 108px;
+  margin-bottom: 60px;
+}
+
+.postPage h1,
+.postPage h2 {
+  padding-bottom: 10px;
+}
+
+
+
+
+#container-space-blog {
+  max-width: 100%;
+  margin: 0 auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.articleList {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+  margin-bottom: 5em;
+  width: 1000px;
+  margin: 0 auto;
+  padding-top: 81px;
+  padding-bottom: 81px;
+}
+
+.item {
+  width: 100%;
+  height: 350px;
+  border-radius: 0.5em;
+  padding: 1em;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+}
+
+.item:hover {
+  transform: scale(1.05);
+}
+
+a {
+  text-decoration: none;
+}
+
+.title {
+  font-size: 1.2em;
+  font-weight: 400;
+  color: white;
+  text-decoration: none;
+
+}
+
+.title:hover {
+  text-decoration: underline;
+}
+
+.description {
+  font-size: 0.96em;
+  font-weight: 300;
+  color: white;
+  text-decoration: none;
+}
+
+.date {
+  margin: unset;
+  font-size: 0.9em;
+  color: #fff;
+  z-index: 2;
+  color: white;
+  text-decoration: none;
+}
+
+
+.thumbnail,
+.thumbnail img {
+  position: relative;
+  border-radius: 0.5em;
+  overflow: hidden;
+  width: 308px;
+  height: 202px;
+  object-fit: cover;
+}
+
+.thumbnail::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+  border-radius: 0.5em;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.thumbnail:hover::before {
+  opacity: 1;
+}
+
+
+/* Add media queries for responsiveness */
+@media screen and (max-width: 1147px) {
+  .articleList {
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+  }
+
+  .item {
+    width: 100%;
+    height: auto;
+    color: white;
+    text-decoration: none;
+    overflow: hidden;
+    width: 308px;
+    height: 202px;
+  }
+
+  .date {
+    font-size: 0.8em;
+    color: white;
+    text-decoration: none;
+    overflow: hidden;
+    width: 308px;
+    height: 202px;
+  }
+
+
+  .thumbnail,
+  .thumbnail img {
+    position: relative;
+    border-radius: 0.5em;
+    overflow: hidden;
+    width: 308px;
+    height: 202px;
+    object-fit: cover;
+  }
+
+  .title {
+    font-size: 1.2em;
+    font-weight: 400;
+    color: white;
+    text-decoration: none;
+    overflow: hidden;
+    width: 308px;
+    height: 69px;
+  }
+
+  .date,
+  .description {
+    color: #fff;
+    text-decoration: none;
+    color: white;
+    text-decoration: none;
+    overflow: hidden;
+    width: 308px;
+    height: 41px;
+  }
+
+  .joey-aboutme-image img {
+    max-width: 89%;
+    max-height: 291px;
+    border-radius: 48%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .articleList {
+    grid-template-columns: 1fr;
+    justify-content: center;
+  }
+
+  .item {
+    width: 100%;
+    height: auto;
+    color: white;
+    text-decoration: none;
+    overflow: hidden;
+    width: 308px;
+    height: 202px;
+  }
+
+  .date {
+    font-size: 0.8em;
+    color: white;
+    text-decoration: none;
+    overflow: hidden;
+    width: 308px;
+    height: 202px;
+  }
+
+
+  .thumbnail,
+  .thumbnail img {
+    position: relative;
+    border-radius: 0.5em;
+    overflow: hidden;
+    width: 308px;
+    height: 202px;
+    object-fit: cover;
+  }
+
+  .title {
+    font-size: 1.2em;
+    font-weight: 400;
+    color: white;
+    text-decoration: none;
+    overflow: hidden;
+    width: 308px;
+    height: 69px;
+  }
+
+  .date,
+  .description {
+    color: #fff;
+    text-decoration: none;
+    color: white;
+    text-decoration: none;
+    overflow: hidden;
+    width: 308px;
+    height: 41px;
+  }
+}
+
+
+/* 
+
+.pagination-placement {
+  display: flex;
+  justify-content: center;
+}
+
+
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+
+.pagination-item {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #ccc;
+  margin: 0 5px;
+  cursor: pointer;
+  background-color: #fff;
+  color: #333;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+  border-radius: 50%;
+}
+
+.pagination-item:hover {
+  background-color: #f1f1f1;
+}
+
+
+.pagination-item-selected {
+  background-color: #007bff;
+  color: #fff;
+  border-color: #007bff;
+  border-radius: 50%;
+}
+
+.pagination-item-selected:hover {
+  background-color: #0070e0;
+}
+
+
+ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*========== Footer ==========*/
+
+footer.gymstart-footer {
+  /* background: #18181e; */
+  border-top: 1px solid #2d2d38;
+  text-align: center;
+  color: white;
+  padding: 25px;
+  z-index: 10;
+}
+
+.gymstart-footer::before {
+  width: 445px;
+  height: 445px;
+  top: -100x;
+  right: 8%;
+  background: radial-gradient(41.29% 41.29% at 50% 50%, #02a6fe 0, rgba(0, 193, 212, 0) 100%);
+}
+
+
+.gymstart-footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  text-align: left;
+}
+
+.gymstart-footer-logo {
+  display: flex;
+  flex-direction: column;
+}
+
+.gymstart-logo-image img {
+  width: 118px;
+  height: 30px;
+  margin-bottom: 1rem;
+}
+
+.gymstart-footer-links div {
+  width: 250px;
+  margin: 1rem;
+}
+
+.gymstart-footer-links {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.gymstart-footer-title {
+  margin-bottom: 2rem;
+}
+
+.gymstart-footer-links h4 {
+  color: #fff;
+  margin-bottom: 0.9rem;
+  font-size: 25.11px;
+  font-weight: 800;
+  line-height: 30.30px;
+}
+
+.gymstart-footer-links {
+  padding: 0 5rem;
+}
+
+.gymstart-footer-links li {
+  list-style: none;
+  padding: 0.2rem 0;
+}
+
+.gymstart-footer-links li a {
+  color: white;
+  text-decoration: none;
+}
+
+.gymstart-footer-socialmediaicons {
+  padding: 0 5rem;
+}
+
+.gymstart-footer-socialmediaicons i {
+  color: white;
+  font-size: 20px;
+  margin: 0 8px;
+}
+
+.gymstart-footer-socialmediaicons h4 {
+  color: #fff;
+  margin-bottom: 0.9rem;
+  font-size: 25.11px;
+  font-weight: 800;
+  line-height: 30.30px;
+}
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1030px) {
+  .gymstarthomepage-pseudoelement {
+    content: '';
+    position: absolute;
+    right: 0;
+    left: 92px;
+    top: 325px;
+    width: 250px;
+    height: 50%;
+    background: #37d72f;
+    transform-origin: top;
+    transform: skewX(-25deg);
+    z-index: 1;
+  }
+
+  .itess-homepage-wrap {
+
+    flex-direction: column;
+  }
+
+  .itess-homepage-content {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .gymstart-introducingpart .embed-responsive {
+    max-width: 1360px;
+    width: 99%;
+    height: 315px;
+    margin: auto;
+    border: 20px solid #2a2a2a;
+    border-radius: 70px;
+    box-shadow: 0 0 10px 1px #131313;
+  }
+
+  .gymstart-aboutus h1 {
+    color: white;
+    text-align: center;
+    padding: 40px 0px;
+  }
+
+  .gymstart-aboutus-content-centralrotation {
+    flex-direction: column;
+  }
+
+  .gymstart-aboutus-content-division {
+    padding: 40px 0px;
+  }
+
+  .gymstart-aboutus-content-rotation,
+  .gymstart-aboutus-content-rotationtwo {
+    width: 100%;
+  }
+}
+
+
+@media screen and (max-width: 983px) {
+  .gymstart-drinks {
+    padding-bottom: 567px;
+}
+  .gymstart-drinks-image {
+    width: 100%;
+    height: 667px;
+    flex-direction: column;
+  }
+}
+
+
+
+
+
+
+
+
+
+h1,
+h2,
+h3 {
+  color: var(--title-color);
+  font-weight: var(--font-bold);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*=============== REUSABLE CSS CLASSES ===============*/
+.container {
+  max-width: 1124px;
+  margin-right: 1.5rem;
+  margin-left: 1.5rem;
+}
+
+.section {
+  padding: 4.5rem 0 2rem;
+}
+
+.section__data {
+  display: flex;
+  flex-direction: column;
+  row-gap: .75rem;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section__title,
+.section__title-border {
+  font-size: var(--big-font-size);
+  letter-spacing: 1.5px;
+}
+
+.section__subtitle {
+  font-size: var(--h2-font-size);
+  font-family: var(--second-font);
+  font-weight: 400;
+  letter-spacing: 1.5px;
+  color: var(--first-color);
+  transform: rotate(-2deg);
+}
+
+.section__titles {
+  display: flex;
+  column-gap: .75rem;
+  justify-content: center;
+}
+
+.section__title-border {
+  -webkit-text-stroke: 1px var(--text-color);
+  color: transparent;
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.main {
+  overflow: hidden;
+}
+
+.color-red {
+  color: hsl(0, 80%, 64%);
+}
+
+.color-green {
+  color: var(--first-color);
+}
+
+
+/* -------------------------------------------------------------------
+NAVBAR
+------------------------------------------------------------------- */
+
+
+
+.gymstart-emptysection {
+  padding-bottom: 100px;
+}
+
+
+section.gymstart-actualcontent-prices {
+  padding-bottom: 20px;
+}
+
+.gymstart-prices-content {
+  color: white;
+}
+
+.gymstart-prices-content {
+  margin: 0 -12rem;
+  padding-left: 12rem;
+  padding-right: 12rem;
+}
+
+.gymstart-prices-content {
+  padding-top: 50px;
+  padding-bottom: 80px;
+}
+
+.gymstart-table {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.gymstart-table-tableboxes {
+  width: 382px;
+  margin: 15px;
+  color: white;
+  border-radius: 40px;
+  overflow: hidden;
+  /* backdrop-filter: blur(100px) contrast(60%);*/
+  border: 1px solid rgba(255, 255, 255, .2);
+  /* box-shadow: 0px 10px 33px 0px rgb(0 0 0 / 75%);
+  -webkit-box-shadow: 0px 10px 33px 0px rgb(0 0 0 / 75%);
+  -moz-box-shadow: 0px 10px 33px 0px rgba(0, 0, 0, 0.75);
+  -webkit-backdrop-filter: blur(100px) contrast(60%); */
+}
+
+.gymstart-table-tableboxes-overviewInfo,
+.productSpecifications {
+  padding: 24px;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 32px;
+}
+
+.productinfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  min-height: 80px;
+  margin-bottom: 50px;
+}
+
+.grouptext {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.un-text {
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: space-between;
+  margin-top: 10px;
+  font-weight: 500;
+}
+
+.un-text h4 {
+  font-weight: 100;
+}
+
+
+
+.gymstart-videos {
+  padding-top: 150px;
+  padding-bottom: 50px;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 20px;
+}
+
+.video-item {
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+  /* 16:9 aspect ratio */
+  position: relative;
+}
+
+.video-item iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 4%;
+}
+
+
+
+
+
+.language-dropdown {
+  position: relative;
+}
+
+/* Language Selector (Visible when not opened) */
+.language-selector {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.language-selector button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px;
+  font-size: 16px;
+  color: #333;
+  transition: color 0.2s, transform 0.2s;
+}
+
+.language-selector button:hover {
+  color: #007bff;
+  transform: scale(1.05);
+}
+
+.language-flag {
+  width: 24px;
+  height: 24px;
+}
+
+/* Language Menu (Visible when opened) */
+.language-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  padding: 4px;
+  list-style: none;
+  display: none;
+  z-index: 10;
+}
+
+.language-menu li {
+  margin-bottom: 4px;
+}
+
+.language-menu button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px;
+  font-size: 16px;
+  color: #333;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+}
+
+.language-menu button.active {
+  font-weight: bold;
+}
+
+.language-menu button:hover {
+  color: #007bff;
+  background-color: #f2f2f2;
+}
+
+.gymstart-location-data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  margin-top: 150px;
+}
+
+.gymstart-location-title,
+.gymstart-drinks-title {
+  font-size: var(--biggest-font-size);
+  font-weight: var(--font-black);
+}
+
+.gymstart-location-description {
+  font-size: var(--big-font-size);
+
+}
+
+.map-one {
+  padding-bottom: 60px;
+  padding-top: 515px;
+  position: relative;
+  margin-top: 157px;
+}
+
+.map-one .google-map__contact {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+  top: 0;
+  left: 0;
+}
+
+
+.gymstart-drinks {
+  padding-bottom: 250px;
+}
+
+.gymstart-drinks-data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  margin-top: 134px;
+}
+
+.gymstart-drinks-image {
+  padding-top: 43px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 562px;
+}
+
+.gymstart-drinks-image img {
+  border-radius: 5px;
+  padding-left: 39px;
+}
