@@ -87,7 +87,7 @@ const Gallery = () => {
                             {paginatedImages.map((image, index) => (
                                 <Image
                                     key={index}
-                                    src={`/gallery/${image}`}
+                                    src={`./gallery/${image}`}
                                     alt={`Image ${index + 1}`}
                                     loading="lazy"
                                     width={600}
