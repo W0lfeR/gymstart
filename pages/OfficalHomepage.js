@@ -49,7 +49,7 @@ const OfficalHomepage = () => {
                             <h1>За нас</h1>
                             <div className="gymstart-aboutus-content-centralrotation">
                                 <div className="gymstart-aboutus-content-rotation">
-                                    <p>  &quot;Start Fitness Club&quot;, е разположен в сградата на ПГТЕ &quot;Хенри Форд&quot;, в близост до метростанция &quot;Вардар&quot; и последната спирка на трамвай № 3. Клубът /Залата/ е оборудван/а с професионални уреди:</p>
+                                    <p>  Start Fitness Club, е разположен в сградата на ПГТЕ Хенри Форд, в близост до метростанция Вардар и последната спирка на трамвай № 3. Клубът /Залата/ е оборудван/а с професионални уреди:</p>
                                     <p>LIFE FITNESS - кардио зона</p>
                                     <p>IVANKO - дискове, фиксирани дъмбели, криви фиксирани и свободни лостове</p>
                                     <p>JIMSA - професионално фитнес оборудване</p>
@@ -76,7 +76,7 @@ const OfficalHomepage = () => {
                 <section className="gymstart-introducingpart">
                     <div className="container-space">
                         <div className="gymstart-introducingpart-title">
-                            <div className="">
+                            <div className="k">
                                 <h1>Video</h1>
                                 <p>Feel It</p>
                             </div>
